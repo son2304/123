@@ -190,5 +190,123 @@
     <!-- 
         오디오 태그와 유사, 오디오 태그 참조
      -->
+
+    <form action="">폼 태그</form>
+    <!-- 
+        *폼 태그*
+        폼 태그는 중첩 사용 불가
+        method = 서버에 전송하는 방식 지정 (post, get)
+        action = 송신한 폼 데이터 처리의 CGI 프로그램의 경로(URL) 및 파일명
+        enctype = 정보를 서버에 전송하는 데 사용되는 mime 형식 지정
+        target = 프레임에서와 같은 기능의 타겟 지정
+    -->
+    <input type="text">
+    <!-- 
+        *입력 폼 태그*
+        <input
+            type=[속성지정]
+            name="입력 양식 이름"
+            value="입력 양식에 표시될 문자열"
+            size="글자수"
+            checked=[속성지정]
+            maxlength="글자수"
+        >
+
+        *type 속성*
+        text        = 문자 입력
+        password    = 문자 입력시 데이터 *로 표현
+        email       = email 입력
+        checkbox    = 다수 항목 선택용 체크상자
+        radio       = 여러항목 중 한개 선택하는 라디오 버튼
+        hidden      = 숨겨진 입력 양식
+        image       = 이미지 입력
+        submit      = 웹서버로 폼 데이터 전송
+        reset       = 폼 데이터 입력 취소
+        color       = 색 입력용 색상 표
+        file        = 컴퓨터 파일 선택
+        search      = 검색어 입력
+        textarea    = 사용자가 많은 양의 데이터를 여러 줄에 걸쳐 입력할 수 있도록 함 / rows(입력 가능한 줄)와 cols(한 줄에 입력할 수 있는 수)로 조절
+        number|range = 스핀버튼 및 슬라이드바로 숫자 입력 [number=스핀버튼/range=슬라이드바 => min,max,step 속성으로 최소,최대,증감수치 설정]
+        month|week|date|time|datetime-local = 년,월,일,시간 정보 입력
+
+        *name 속성*
+        입력한 내용을 저장할 변수의 이름 지정
+
+        *value 속성*
+        text, password = 입력 기본값 지정
+        checkbox, radio = 해당 버튼이 선택되면 웹서버에 보낼 값
+        submit, reset = 버튼에 표시될 내용 지정
+
+        *checked 속성*
+        checkbox, radio의 기본 값으로 선택
+        checked="on" 이면 선택되어 있음
+        
+        *size 속성*
+        text, password에서 입력 영역에 입력되는 문자수 (기본값 = 20)
+
+        *maxlength 속성*
+        text, password에서 입력 받을 수 있는 최대 문자수
+
+        *placeholder 속성* - <예제 참고>
+        URL주소, HP번호, e-mail 관련해 일정한 형식으로 지정가능
+
+        *pattern 속성* - <예제 참고>
+        입력 숫자 지정 가능
+
+        // radio와 checkbox
+        radio는 하나만 선택 가능, checkbox는 여러 개 선택 가능
+        label태그로 캡션화 하면 이미지와 문자열로도 선택 가능
+     -->
+
+    <fieldset>그룹화 태그</fieldset>
+    <!-- 
+        그룹화 태그를 통해 폼 요소를 외곽선 박스와 제목으로 묶을 수 있음
+
+        <form>
+            <fieldset ~>
+                <legend> 제목 </legend>
+
+        legend 태그로 그룹 제목 지정
+    -->
+
+    <label for="">라벨 태그</label>
+    <!-- 
+        캡션과 폼 요소를 명확히 하기 위해 사용
+        <label> 태그 기술 방법 2가지
+
+        - <label> 이름 : <input type="text"~~ </label>
+        - <label for="name_in"> 이름 : </label>
+            <input type="text" id="name_in">
+    -->
+
+    <datalist>데이터목록 태그</datalist>
+    <!-- 
+        드롭다운 버튼이 추가되어 여러 데이터를 보여주는 태그
+
+        <datalist> 태그 안에 <option> 태그를 사용해 목록 추가
+        
+        <datalist>
+            <option value="1번 항목">
+            <option value="2번 항목">
+            ~~~~
+            </datalist>
+
+        input에 list옵션을 추가하고
+        datalist에 id를 추가해 연결하여 사용 - 동일한 이름으로 설정
+    -->
+
+    <select name="" id="">콤보/리스트 박스 태그</select>
+    <!--
+        size 옵션으로 최대항목수 설정, 기본값 1
+        multle 기술시 다수 선택 가능
+        <option> 태그로 항목을 추가하며 selected 속성을 추가하면 선택된 상태로 출력
+    -->
+
+    <button>버튼 태그</button>
+    <!-- 
+        submit, reset, button 속성
+        예제참조
+    -->
+</form>
 </body>
 </html>
